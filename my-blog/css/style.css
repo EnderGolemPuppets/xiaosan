@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* AuricWinters主题色方案 - 使用CSS变量方便主题修改 */
+:root {
+    /* 主题颜色变量 */
+    --color-primary: #FFD700;    /* 主色调：金色 - 来自Auric */
+    --color-background: #F8F9FA;  /* 背景色：雪花白 - 来自Winters */
+    --color-text: #2C2C3A;        /* 文字色：深灰蓝 - 确保可读性 */
+    --color-accent: #E0F7FA;      /* 强调色：冰蓝色 - 冬日冰晶效果 */
+    --color-border: #E9ECEF;      /* 边框色：浅灰色 */
+}
+
+body{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-background); /* 雪花白背景 */
+    color: var(--color-text); /* 深灰蓝文字 */
+}
+
+nav{
+    display: flex;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(248, 249, 250, 0.8); /* 雪花白背景 */
+}
+
+nav img{
+    height: 3rem;
+    margin-right: 1rem;
+}
+nav div{
+    display: flex;
+}
+nav div a{
+    align-self: center;
+    color: var(--color-text); /* 深灰蓝链接 */
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* 为所有样式变化添加平滑过渡效果 */
+    transition: all 0.25s ease;
+    margin: 0 1rem;
+}
+
+/* 鼠标按下时的样式 */
+nav div a:active {
+    color: var(--color-primary); /* 金色 - 更明显的颜色 */
+}       
+
+/* 当前页面导航链接高亮样式 */
+nav div a.active {
+    color: var(--color-primary); /* 与按下时相同的金色 */
+}       
+
+/* 额外添加：鼠标悬停时的样式 */
+nav div a:hover {
+    color: var(--color-primary); /* 金色 */
+    background-color: rgba(224, 247, 250, 0.5); /* 半透明冰蓝色背景 */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
